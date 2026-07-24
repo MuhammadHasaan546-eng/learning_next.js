@@ -1,7 +1,14 @@
-export default function RootLayout({ children }) {
+// src/app/layout.js
+import React from "react";
+
+export default function Layout({ children, team }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <body>
+      {/* Yeh main app page.js dikhayega */}
+      <div>{children}</div>
+
+      {/* Yeh @team/page.js ko render karega */}
+      <div>{team}</div>
+    </body>
   );
 }
